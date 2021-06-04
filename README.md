@@ -37,3 +37,17 @@ Step 5 - Create Maria-DB database Docker File
 	II - Run maria-DB Docker Image
 	
 		docker run -d -p 3306:3306 --name moresand-mariadb -e MYSQL_ROOT_PASSWORD=123456 moresand-mariadb
+
+Step 6 - Create MSample Helow world Appication using docker-compose
+
+	Running Docker Compose
+
+		docker-compose up -d
+
+		docker-compose ps	
+
+	Getting Familiar with Docker Compose Commands
+
+		docker-compose logs
+		docker-compose stop
+		docker-compose down
