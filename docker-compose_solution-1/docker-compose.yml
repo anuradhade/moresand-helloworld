@@ -7,17 +7,19 @@ version: '3.7'
 services:
 
      nginx:
+        image: moresand-nginx:1.1
         container_name: moresand-hello-world-lb
-        build: nginx-docker
         ports:
-          - "8000:80"
+          - "80:80"
+        volumes: 
+          - ./nginx-conf/:/etc/nginx/conf.d/ 
 
 
-
-     tomcat_web:
+     tomcat110:
+        image: moresand-hello:1.1
         container_name: moresand-hello-world-tomcat
-        build: sample-helloWorld
+
         ports:
-          - '8082:8080'
+          - '8080:8080'
 
 

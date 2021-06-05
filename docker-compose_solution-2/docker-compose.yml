@@ -1,0 +1,25 @@
+#######################################################################
+#            moresand hello-world App - Docker-compose v0.1          #
+#######################################################################
+
+
+version: '3.7'
+services:
+
+     nginx:
+        build: nginx-docker
+        container_name: moresand-hello-nginx
+        ports:
+          - "80:80"
+        volumes: 
+          - ./conf/:/etc/nginx/conf.d/ 
+
+
+     tomcat110:
+        build: sample-helloWorld
+        container_name: moresand-hello-world-tomcat
+
+        ports:
+          - '8080:8080'
+
+

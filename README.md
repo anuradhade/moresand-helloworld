@@ -38,7 +38,25 @@ Step 5 - Create Maria-DB database Docker File
 	
 		docker run -d -p 3306:3306 --name moresand-mariadb -e MYSQL_ROOT_PASSWORD=123456 moresand-mariadb
 
-Step 6 - Create MSample Helow world Appication using docker-compose
+Step 6 - Create Sample Helow world Appication using docker-compose 
+
+	Solution I - Already create docker image using Solution-1
+
+		goto docker-compose_solution-1 file direcory
+
+		docker-compose up -d
+
+		Link - http://localhost/sample/
+
+	Solution II - when the start docker-composer creating docker image and start container using solution II
+
+		goto docker-compose_solution-2 file direcory
+
+		docker-compose up -d
+
+		Link - http://localhost/sample/
+
+	
 
 	Running Docker Compose
 
